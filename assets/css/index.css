@@ -10,6 +10,7 @@
     --white-main: #fff;
     --red-main: #a01111;
     --orange-main: #ffa500;
+    --gray-main: rgb(130, 130, 123);
 }
 /* contacts on top */
 .contactGlobal{
@@ -22,6 +23,7 @@
     left: 0;
     right: 0;
     top: 0;
+    /* margin: 15px 0; */
 }
 #contact-handles{
     margin: 15px;
@@ -80,12 +82,19 @@
     /* background: var(--red-main); */
 }
 #showMenu, #hideMenu{
-    font-size: 25px;
-    /* border: 2px solid var(--orange-main); */
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+    font-size: 20px;
+    border: 2px solid var(--orange-main);
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 5px 5px;
+}
+#showMenu:hover, #hideMenu:hover{
+    cursor: pointer;
+    border: 3px solid var(--gray-main);
+    /* transition: all .4s; */
     padding: 5px 4px;
+    /* color: var(--gray-main); */
 }
 #hideMenu{
     padding: 5px 6px;
@@ -118,12 +127,13 @@
 .pages-drop-down{
     position: absolute;
     width: 200px;
-    background: var(--black--main);
+    background: var(--white-main);
     right: 10px;
     top: 140px;
     padding: 10px 5px;
     transition: all .7s;
-    box-shadow: 0 0 20px var(--black--main);
+    box-shadow: 0 0 20px var(--white-main);
+    border-radius: 4px;
 
 }
 .pages-drop-down ul{
@@ -131,7 +141,7 @@
     list-style-type: none;
 }
 .pages-drop-down ul li a{
-    color: var(--white-main);
+    color: var(--black--main);
     text-decoration: none;
 
 }
@@ -140,7 +150,7 @@
 }
 .pages-drop-down ul li:hover{
     border-bottom: none;
-    border-left: 2px solid var(--white-main);
+    border-left: 2px solid var(--black--main);
     cursor: pointer;
     font-weight: bold;
     transition: .3s ease;
@@ -151,13 +161,71 @@
     display: block;
 }
 
-/* #hero{
-    background: url(https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-
-} */
+/* hero section */
+#hero{
+    background: url(https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center/cover;
+    /* height: 700px; */
+    color: var(--white-main);
+    padding: 5px 20px;
+}
+.homeText{
+    margin: 15px 0;
+}
+.homeText h1{
+    line-height: 1.5;
+    /* letter-spacing: 2px; */
+    font-weight: bold;
+    font-size: 2rem;
+}
+.homeText p{
+    line-height: 2;
+    margin: 15px 0;
+}
+.homeText aside{
+    line-height: 2;
+}
+.shop-cart{
+    margin: 20px 0;
+}
+#shop-nowBtn{
+    padding: 8px 25px;
+    background: transparent;
+    color: var(--white-main);border: 2px solid var(--white-main);
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+#shop-nowBtn:hover{
+    background: var(--orange-main);
+    color: var(--white-main);
+        border: 2px solid var(--orange-main);
+        cursor: pointer;
+        transition: all .3s;
+                transform: translateY(-15px);}
+.shop-right, .cart-icon-add{
+    position: relative;
+    left: 10px;
+}
+#cartBtn{
+    padding: 8px 25px;
+        background: var(--orange-main);
+        color: var(--white-main);
+        border: 2px solid var(--orange-main);
+        text-transform: uppercase;
+        border-radius: 5px;
+        margin: 0 10px;
+}
+#cartBtn:hover{
+    background: transparent;
+        color: var(--white-main);
+        border: 2px solid var(--white-main);
+        cursor: pointer;
+                transition: all .3s;
+                                transform: translateY(-15px);
+}
 
 /* For Media Querrt - Smaller Screens */
 @media (min-width: 0) and (max-width: 750px) {
+    
     .contactGlobal{
         display: none;
     }
@@ -167,17 +235,18 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 75px;
+        top: 70px;
         width: 80%;
-        height: 80%;
+        height: 89%;
         background: var(--orange-main);
+                overflow-y: scroll;
     }
     .navbar ul{
         display: block;
     }
     .navbar ul li{
         margin-top: 10px;
-        padding: 20px;
+        padding: 15px;
     }
     .navbar ul li:hover{
         border-bottom: none;
@@ -195,16 +264,17 @@
         }
     
         .pages-drop-down {
-            position: absolute;
+            position: relative;
             /* top: 5px;
             background: auto;
             background: transparent;
             /* position: absolute; */
-                width: 200px;
+                width: 100%;
                 background: var(--black--main);
                 right: 10px;
-                top: 55px;
-                left: 50px;
+                top: 5px;
+                left: 0;
+                bottom: 10px;
     
         }
     
@@ -216,7 +286,6 @@
         .pages-drop-down ul li a {
             color: var(--white-main);
             text-decoration: none;
-    
         }
     
         .pages-drop-down ul li {
@@ -225,11 +294,24 @@
         .pages-drop-down ul li:hover{
             width: 200px;
         }
+        #pages{
+            margin-bottom: 30px;
+        }
 
     /* Menu Bar */
     .menuIcon{
         display: block;
     }
+
+    /* hero section */
+    /* #hero{
+        height: 800px
+    } */
+        .homeText h1 {
+            line-height: normal;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
 
 
 }
