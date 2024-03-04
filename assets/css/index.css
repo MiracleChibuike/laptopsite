@@ -23,6 +23,7 @@
     left: 0;
     right: 0;
     top: 0;
+    z-index: 100;
     /* margin: 15px 0; */
 }
 #contact-handles{
@@ -82,10 +83,10 @@
     /* background: var(--red-main); */
 }
 #showMenu, #hideMenu{
-    font-size: 20px;
+    font-size: 23px;
     border: 2px solid var(--orange-main);
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 8px;
     padding: 5px 5px;
 }
@@ -121,34 +122,38 @@
     color: var(--white-main);
     padding: 0 10px;
 }
-.pages-drop-down{
+.drop{
     display: none;
 }
-.pages-drop-down{
+.drop{
     position: absolute;
     width: 200px;
     background: var(--white-main);
-    right: 10px;
-    top: 140px;
+    right: 170px;
+    top: 100px;
     padding: 10px 5px;
     transition: all .7s;
     box-shadow: 0 0 20px var(--white-main);
     border-radius: 4px;
+    display: none;
 
 }
-.pages-drop-down ul{
+#pages:hover ~ .drop{
+    display: block;
+}
+.drop ul{
     display: block;
     list-style-type: none;
 }
-.pages-drop-down ul li a{
+.drop ul li a{
     color: var(--black--main);
     text-decoration: none;
 
 }
-.pages-drop-down ul li{
+.drop ul li{
     padding: 10px;
 }
-.pages-drop-down ul li:hover{
+.drop ul li:hover{
     border-bottom: none;
     border-left: 2px solid var(--black--main);
     cursor: pointer;
@@ -157,8 +162,24 @@
     transform: translateX(10px);
     color: var(--orange-main);
 }
-.navbar ul li:hover .pages-drop-down{
+/* .navbar ul li:hover .pages-drop-down{
     display: block;
+} */
+/* pages more */
+#sign-upBTN{
+    padding: 8px 25px;
+        background: transparent;
+        color: var(--white-main);
+        border: 2px solid var(--white-main);
+        text-transform: uppercase;
+        border-radius: 5px;
+}
+#sign-upBTN:hover{
+    color: var(--white-main);
+    border: 2px solid var(--orange-main);
+    background: var(--orange-main);
+    transition: .3s ease;
+    cursor: pointer;
 }
 
 /* hero section */
@@ -239,7 +260,6 @@
         width: 80%;
         height: 89%;
         background: var(--orange-main);
-                overflow-y: scroll;
     }
     .navbar ul{
         display: block;
@@ -259,44 +279,37 @@
             transform: translateX(10px);
             border-radius: 4px;
     }
-        .pages-drop-down {
+        .drop {
             display: none;
-        }
-    
-        .pages-drop-down {
-            position: relative;
-            /* top: 5px;
-            background: auto;
-            background: transparent;
-            /* position: absolute; */
-                width: 100%;
-                background: var(--black--main);
-                right: 10px;
-                top: 5px;
-                left: 0;
-                bottom: 10px;
     
         }
     
-        .pages-drop-down ul {
-            /* display: block; */
+        .drop ul {
+            display: block;
             list-style-type: none;
         }
     
-        .pages-drop-down ul li a {
-            color: var(--white-main);
+        .drop ul li a {
+            color: var(--black--main);
             text-decoration: none;
+    
         }
     
-        .pages-drop-down ul li {
+        .drop ul li {
             padding: 10px;
         }
-        .pages-drop-down ul li:hover{
-            width: 200px;
+    
+        .drop ul li:hover {
+            border-bottom: none;
+            border-left: 2px solid var(--black--main);
+            cursor: pointer;
+            font-weight: bold;
+            transition: .3s ease;
+            transform: translateX(10px);
+            color: var(--orange-main);
         }
-        #pages{
-            margin-bottom: 30px;
-        }
+    
+      
 
     /* Menu Bar */
     .menuIcon{
@@ -312,6 +325,5 @@
             letter-spacing: 2px;
             font-weight: bold;
         }
-
 
 }
