@@ -93,7 +93,7 @@
 #showMenu:hover, #hideMenu:hover{
     cursor: pointer;
     border: 3px solid var(--gray-main);
-    /* transition: all .4s; */
+    transition: all .4s;
     padding: 5px 4px;
     /* color: var(--gray-main); */
 }
@@ -130,15 +130,24 @@
     width: 200px;
     background: var(--white-main);
     right: 170px;
-    top: 100px;
+    top: 50px;
     padding: 10px 5px;
     transition: all .7s;
     box-shadow: 0 0 20px var(--white-main);
     border-radius: 4px;
     display: none;
+    animation: navAnim 1s linear;
 
 }
-#pages:hover ~ .drop{
+@keyframes navAnim {
+    0%{
+        transform: scale(0);
+    }
+    50%, 100%{
+        transform: scale(0.9, 1.0);
+    }
+}
+.navbar ul li:hover  .drop{
     display: block;
 }
 .drop ul{
@@ -246,6 +255,7 @@
 
 /* For Media Querrt - Smaller Screens */
 @media (min-width: 0) and (max-width: 750px) {
+
     
     .contactGlobal{
         display: none;
@@ -260,6 +270,18 @@
         width: 80%;
         height: 89%;
         background: var(--orange-main);
+        animation: rotateNav 2s linear;
+        transition: all .3s;
+    }
+    @keyframes rotateNav {
+        0%{
+            width: 0;
+            height: 0;
+        }
+        50%, 100%{
+            width: 80%;
+            height: 89%;
+        }
     }
     .navbar ul{
         display: block;
@@ -268,9 +290,12 @@
         margin-top: 10px;
         padding: 15px;
     }
-    .navbar ul li:hover{
+         /* Menu Bar */
+         .menuIcon {
+             display: block;
+         }
+    /* .navbar ul li:hover{
         border-bottom: none;
-            /* border-left: 2px solid var(--white-main); */
             background: var(--black--main);
             width: 280px;
             cursor: pointer;
@@ -278,9 +303,10 @@
             transition: .3s ease;
             transform: translateX(10px);
             border-radius: 4px;
-    }
+    } */
         .drop {
             display: none;
+            left: 0;
     
         }
     
@@ -296,34 +322,100 @@
         }
     
         .drop ul li {
-            padding: 10px;
+            padding: 10px 5px;
         }
+                .drop ul li:hover {
+                    border-bottom: none;
+                    border-left: 2px solid var(--black--main);
+                    background: transparent;
+                    color: var(--white-main);
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: .3s ease;
+                    transform: translateX(10px);
+                    border-radius: none;
+                }
     
-        .drop ul li:hover {
+        /* .drop ul li:hover {
             border-bottom: none;
             border-left: 2px solid var(--black--main);
             cursor: pointer;
             font-weight: bold;
             transition: .3s ease;
             transform: translateX(10px);
-            color: var(--orange-main);
-        }
+            color: var(--white-main);
+        } */
     
       
 
-    /* Menu Bar */
-    .menuIcon{
-        display: block;
-    }
+    
 
     /* hero section */
     /* #hero{
         height: 800px
     } */
+        
         .homeText h1 {
             line-height: normal;
             letter-spacing: 2px;
             font-weight: bold;
         }
+                #shop-nowBtn {
+                    padding: 8px 15px;
+                }
+                .shop-right,
+                .cart-icon-add {
+                    position: relative;
+                    left: 3px;
+                }
+        
+                #cartBtn {
+                    padding: 8px 15px;
+                 
+                }
 
+}
+
+/* for iPads */
+@media (min-width: 760px) and (max-width: 820px) {
+    /* NavBar */
+        .navbar {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 120px;
+            width: 80%;
+            height: 89%;
+            background: var(--orange-main);
+            animation: rotateNav 2s linear;
+            transition: all .3s;
+            z-index: 100;
+        }
+                 @keyframes rotateNav {
+                     0% {
+                         width: 0;
+                         height: 0;
+                     }
+        
+                     50%,
+                     100% {
+                         width: 80%;
+                         height: 89%;
+                     }
+                 }
+                 .navbar ul {
+                     display: block;
+                 }
+        
+                 .navbar ul li {
+                     margin-top: 10px;
+                     padding: 25px;
+                 }
+                 
+                /* Menu Bar */
+                .menuIcon {
+                    display: block;
+                }
+    
 }
