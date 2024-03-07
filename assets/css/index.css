@@ -13,6 +13,8 @@
   --red-main: #a01111;
   --orange-main: #ffa500;
   --gray-main: rgb(130, 130, 123);
+  --secondary-white: #f5f5f5;
+  --gray-secondary: rgb(132, 130, 130);
 }
 /* contacts on top */
 .contactGlobal {
@@ -79,6 +81,7 @@
 .logo span {
   color: var(--orange-main);
   font-size: 2.5rem;
+  font-family: "Odibee Sans", sans-serif;
 }
 /* MENU BAR */
 .menuIcon {
@@ -328,13 +331,17 @@
 }
 #button-vd i {
   font-size: 35px;
-  color: var(--red-main);
-  border: 2px solid var(--red-main);
+  color: var(--white-main);
+  border: 2px solid var(--white-main);
   padding: 5px;
   border-radius: 50%;
   position: relative;
   left: 10px;
   bottom: 10px;
+}
+#button-vd i:hover{
+    border: 2px solid var(--red-main);
+    color: var(--orange-main);
 }
 .vid{
     text-align: center;
@@ -343,14 +350,87 @@
     width: 300px;
 }
 .video-info{
-    background: var(--white-main);
     display: grid;
     place-content: center;
-    width: 200px;
     position: relative;
-    left: 230px;
-    bottom: 190px;
-    border-radius: 5px;
+    bottom: 180px;
+    color: var(--white-main);
+}
+/* PRODCUTS SECTION */
+#products{
+    padding: 25px 20px;
+    background: var(--secondary-white);
+}
+.products-header{
+    text-align: center;
+    font-size: 2.4rem;
+    font-family: "Dancing Script", cursive;
+    margin: 15px 0;
+}
+.productsDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+    column-gap: 20px;
+   text-align: center;
+}
+#p-image-1{
+    width: 200px;
+}
+/* .prodcut1, .prodcut2, .prodcut3{
+    margin: 10px 0;
+} */
+.showMoreDiv{
+    display: none;
+}
+#show-More-Btn, #show-Less-Btn{
+    border: none;
+    background: var(--gray-secondary);
+    color: var(--white-main);
+    padding: 10px 0;
+    border-radius: 15px;
+    width: 100%;
+    /* margin: 5px 10px; */
+}
+#show-More-Btn:hover, #show-Less-Btn:hover{
+    background: var(--black--main);
+    cursor: pointer;
+    transition: all .5s;
+    transform: translateY(10px);
+}
+#show-More-Btn i, #show-Less-Btn i{
+    padding: 0 10px;
+}
+.products-title{
+    margin: 25px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.showMore, .buys{
+    display: flex;
+    justify-content: space-evenly;
+}
+.price span {
+    color: var(--orange-main);
+    font-weight: bold;
+    font-size: 20px;
+}
+.addCart{
+    padding: 25px 0;
+}
+.addCart button{
+    border: none;
+    background: var(--black--main);
+    color: var(--white-main);
+    padding: 7px 20px;
+    border-radius: 8px;
+}
+.p-info{
+    display: flex;
+    justify-content: space-evenly;
+}
+.p-hints{
+    font-weight: bold;
 }
 
 /* For Media Querrt - Smaller Screens */
@@ -376,6 +456,7 @@
     background: var(--orange-main);
     animation: rotateNav 2s linear;
     transition: all 0.3s;
+    padding-bottom: 10px;
   }
   @keyframes rotateNav {
     0% {
@@ -393,7 +474,7 @@
   }
   .navbar ul li {
     margin-top: 10px;
-    padding: 15px;
+    padding: 20px;
   }
   /* Menu Bar */
   .menuIcon {
@@ -402,7 +483,7 @@
   .navbar ul li:hover {
     border-bottom: none;
     background: var(--black--main);
-    width: 280px;
+    width: 250px;
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s ease;
@@ -412,6 +493,9 @@
   .drop {
     display: none;
     left: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 150px;
   }
 
   .drop ul {
@@ -485,7 +569,7 @@
   .vid{
     text-align: center;
   }
-  .video-info {
+  /* .video-info {
       background: var(--white-main);
       display: grid;
       place-content: center;
@@ -494,6 +578,20 @@
       left: 70px;
       bottom: 190px;
       border-radius: 5px;
+  } */
+  /* PRODCUTS SECTION */
+  #products {
+      padding: 25px 20px;
+  }
+
+  .productsDiv {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      text-align: center;
+  }
+  #show-More-Btn,
+  #show-Less-Btn {
+     width: 100%;
   }
 }
 
@@ -557,5 +655,21 @@
   #video-img{
     width: 300px;
   }
+  .video-info {
+      position: relative;
+      bottom: 20px;
+      left: -220px;
+      color: var(--white-main);
+  }
+   /* PRODCUTS SECTION */
+   #products {
+       padding: 25px 20px;
+   }
+
+   .productsDiv {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       text-align: center;
+   }
   
 }
