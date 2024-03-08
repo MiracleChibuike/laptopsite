@@ -377,6 +377,11 @@
 #p-image-1{
     width: 200px;
 }
+#p-image-1:hover{
+  cursor: pointer;
+  transition: .4s ease-in-out;
+  transform: scale(1.3);
+}
 /* .prodcut1, .prodcut2, .prodcut3{
     margin: 10px 0;
 } */
@@ -432,6 +437,41 @@
 .p-hints{
     font-weight: bold;
 }
+/*--------------------------------------------------------------
+# Scroll top button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: var(--color-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+  background: var(--red-main);
+  color: transparent;
+}
+
+.scroll-top i {
+  font-size: 18px;
+  color: var(--white-main);
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background: #ec2727;
+  color: transparent
+}
+
+.scroll-top.active{
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /* For Media Querrt - Smaller Screens */
 @media (min-width: 0) and (max-width: 750px) {
