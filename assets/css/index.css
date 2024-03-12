@@ -28,6 +28,7 @@
   right: 0;
   top: 0;
   z-index: 100;
+  box-shadow: 0 0 30px var(--black--main);
   /* margin: 15px 0; */
 }
 #contact-handles {
@@ -45,7 +46,7 @@
   height: 40px;
   border-radius: 50%;
   transition: 0.5s ease;
-  transform: translateX(15px);
+  transform: translateY(-10px);
 }
 #contacts-local {
   margin: 15px;
@@ -77,6 +78,7 @@
   font-family: "Odibee Sans", sans-serif;
   letter-spacing: 2px;
   font-size: 2.5rem;
+  cursor: pointer;
 }
 .logo span {
   color: var(--orange-main);
@@ -92,22 +94,22 @@
 #showMenu,
 #hideMenu {
   font-size: 23px;
-  border: 2px solid var(--orange-main);
-  width: 35px;
+  /* border: 2px solid var(--orange-main); */
+  /* width: 35px;
   height: 35px;
   border-radius: 8px;
-  padding: 5px 5px;
+  padding: 5px 5px; */
 }
 #showMenu:hover,
 #hideMenu:hover {
   cursor: pointer;
-  border: 3px solid var(--gray-main);
+  /* border: 3px solid var(--gray-main);
   transition: all 0.4s;
-  padding: 5px 4px;
+  padding: 5px 4px; */
   /* color: var(--gray-main); */
 }
 #hideMenu {
-  padding: 5px 6px;
+  /* padding: 5px 6px; */
   display: none;
 }
 /* NAVBAR */
@@ -377,11 +379,19 @@
 #p-image-1{
     width: 200px;
 }
-#p-image-1:hover{
+#p-image-1:hover, .sameSize:hover{
   cursor: pointer;
   transition: .4s ease-in-out;
   transform: scale(1.3);
 }
+/* Same Sizes */
+.sameSize{
+  width: 250px;
+}
+#sameSizeMain, #sameSize2{
+  width: 280px;
+}
+
 /* .prodcut1, .prodcut2, .prodcut3{
     margin: 10px 0;
 } */

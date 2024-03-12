@@ -17,10 +17,8 @@ showMenu.addEventListener("click", ()=>{
         
     })
 
-    var show_menuAudio = new Audio(
-      "assets/sounds/mixkit-correct-answer-tone-2870.wav"
-    );
-    show_menuAudio.volume = 0.3;
+    var show_menuAudio = new Audio("assets/sounds/woosh-sound.wav");
+    show_menuAudio.volume = 0.7;
     show_menuAudio.play();
 });
 
@@ -31,9 +29,7 @@ hideMenu.addEventListener("click", ()=>{
          hideMenu.style.display = "none";
          showMenu.style.display = "block";
     }
-    var hide_menuAudio = new Audio(
-      "assets/sounds/mixkit-confirmation-tone-2867.wav"
-    );
+    var hide_menuAudio = new Audio("assets/sounds/close-woosh.wav");
     hide_menuAudio.volume = 0.3;
     hide_menuAudio.play();
 })
