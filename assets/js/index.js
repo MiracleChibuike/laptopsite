@@ -34,6 +34,17 @@ hideMenu.addEventListener("click", ()=>{
     hide_menuAudio.play();
 })
 
+function closeNavs() {
+     if ((navbar.style.display = "block")) {
+       navbar.style.display = "none";
+       hideMenu.style.display = "none";
+       showMenu.style.display = "block";
+     }
+     var hide_menuAudio = new Audio("assets/sounds/close-woosh.wav");
+     hide_menuAudio.volume = 0;
+     hide_menuAudio.play();
+}
+
 // https://youtu.be/Z2MyXuHstIs?si=U_pxFug9zraRTgYo
 
 // to play our videos
@@ -70,6 +81,7 @@ var btn2_less = document.querySelector(".lessbtn2");
 btn2.addEventListener("click", ()=>{
     showdiv2.style.display = "block";
     btn2.style.display = "none"
+    console.log(showdiv2)
 });
 
 btn2_less.addEventListener("click", ()=>{
@@ -88,4 +100,48 @@ btn3_Show.addEventListener("click", () =>{
 btn3_less.addEventListener("click", () => {
   showDiv3.style.display = "none";
   btn3_Show.style.display = "block";
+});
+
+// products 4
+
+var P41ShowMore = document.querySelector(".show-btnP4");
+var P41Show_Less = document.querySelector(".lessP4");
+var p4MoreContents = document.querySelector(".moreDivP4");
+P41ShowMore.addEventListener("click", () => {
+   p4MoreContents.style.display = "block";
+   P41ShowMore.style.display = "none"
+});
+
+P41Show_Less.addEventListener("click", () => {
+   p4MoreContents.style.display = "none";
+   P41ShowMore.style.display = "block";
+});
+
+// products 5
+var P5SMore_Contents = document.querySelector(".moreDivP5");
+var Product_5_2Show_MoreBtn = document.querySelector(".show-BtnP5");
+var Product_5_2Show_lessBtn = document.querySelector(".lessP5");
+
+Product_5_2Show_MoreBtn.addEventListener("click", () => {
+     P5SMore_Contents.style.display = "block";
+     Product_5_2Show_MoreBtn.style.display = "none";
+})
+
+Product_5_2Show_lessBtn.addEventListener("click", () => {
+  P5SMore_Contents.style.display = "none";
+  Product_5_2Show_MoreBtn.style.display = "block";
+});
+
+// Products 6
+
+var products_6_3More_Contents = document.querySelector(".moreDiv6");
+var btnP6_Show_More = document.querySelector(".showBtn6");
+var product_6Show_lessbtn = document.querySelector(".less6");
+btnP6_Show_More.addEventListener("click", () => {
+    products_6_3More_Contents.style.display = "block";
+    btnP6_Show_More.style.display = "none";
+})
+product_6Show_lessbtn.addEventListener("click", () => {
+  products_6_3More_Contents.style.display = "none";
+  btnP6_Show_More.style.display = "block";
 });

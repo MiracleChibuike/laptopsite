@@ -6,6 +6,17 @@
   font-style: normal;
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: #f1eff0;
+}
+::-webkit-scrollbar-thumb {
+  background: #c40c49;
+  border-radius: 50px;
+}
 :root {
   --black--main: rgba(0, 0, 0, 0.9);
   --white-main: #fff;
@@ -23,12 +34,13 @@
   padding: 5px 50px;
   background: var(--black--main);
   color: var(--white-main);
+  height: 90px;
   position: sticky;
   left: 0;
   right: 0;
   top: 0;
   z-index: 100;
-  box-shadow: 0 0 30px var(--black--main);
+  /* box-shadow: 0 0 30px var(--black--main); */
   /* margin: 15px 0; */
 }
 #contact-handles {
@@ -361,7 +373,8 @@
 /* PRODCUTS SECTION */
 #products{
     padding: 25px 20px;
-    background: var(--secondary-white);
+      background: url("https://media.istockphoto.com/id/1495576954/photo/abstract-bokeh-background-of-colorful-glowing-lights-with-soft-focus-in-bright-sunlight.jpg?s=612x612&w=0&k=20&c=h3SZpEqEb_2iLSTIeELfnykp2y_4wzV7CkGDQZ6JlEI=") no-repeat center center/cover;
+    /* background: var(--secondary-white); */
 }
 .products-header{
     text-align: center;
@@ -489,20 +502,23 @@
     display: none;
   }
   /* NavBar */
-  /* .nav{
+  .nav{
         position: fixed;
         left: 0;
         right: 0;
         top: 0;
-    } */
+        height: 70px;
+        /* padding: 10px 15px; */
+        z-index: 100;
+        box-shadow: 0 0 45px var(--black--main);
+    }
   .navbar {
     display: none;
     position: absolute;
     left: 0;
     right: 0;
-    top: 70px;
+    top: 66px;
     width: 80%;
-    height: 89%;
     background: var(--orange-main);
     animation: rotateNav 2s linear;
     transition: all 0.3s;
@@ -511,12 +527,12 @@
   @keyframes rotateNav {
     0% {
       width: 0;
-      height: 0;
+      /* height: 0; */
     }
     50%,
     100% {
       width: 80%;
-      height: 89%;
+      /* height: 89%; */
     }
   }
   .navbar ul {
@@ -533,7 +549,7 @@
   .navbar ul li:hover {
     border-bottom: none;
     background: var(--black--main);
-    width: 250px;
+    width: 240px;
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s ease;
@@ -584,9 +600,9 @@
         } */
 
   /* hero section */
-  /* #hero{
-        height: 800px
-    } */
+  #hero{
+        margin-top: 68px;
+    }
 
   .homeText h1 {
     line-height: normal;
