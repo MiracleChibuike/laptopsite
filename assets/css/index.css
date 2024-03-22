@@ -775,7 +775,7 @@
     .emailInput input,
     .subjectInput input,
     .messageInput textarea{
-      width: 270px;
+      width: 230px;
     }
 }
 
