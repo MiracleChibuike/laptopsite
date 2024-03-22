@@ -866,18 +866,18 @@
                 <div class="contact-form">
                     <h2 class="msg">Kindly Send Us a Message</h2>
                     <div class="form">
-                        <form action="mailto:onyebros@gmail.com" autocomplete="on">
+                        <form action="mailto:onyebros@gmail.com" method="post" autocomplete="on" enctype="text/plain">
                             <div class="nameInput">
-                                <input type="text"  placeholder="Name" required>
+                                <input type="text"  placeholder="Name" required name="Your Name">
                             </div>
                             <div class="emailInput">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" required name="Your Email">
                             </div>
                             <div class="subjectInput">
-                                <input type="text" placeholder="Subject" required autocapitalize="Subject">
+                                <input type="text" placeholder="Subject" required autocapitalize="Subject" name="Subject">
                             </div>
                             <div class="messageInput">
-                               <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                               <textarea name="Your Message" id="" cols="30" rows="10" placeholder="Your Message" ></textarea>
                             </div>
                             <div class="btn"><button type="submit" id="btnSubmit">Send Message</button></div>
                         </form>
