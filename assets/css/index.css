@@ -144,6 +144,11 @@
   transition: 0.3s ease;
   cursor: pointer;
 }
+.landing{
+    border-bottom: 3px solid var(--orange-main);
+      transition: 0.3s ease;
+      cursor: pointer;
+}
 .navbar ul li i {
   color: var(--white-main);
   padding: 0 10px;

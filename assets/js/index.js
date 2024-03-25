@@ -254,7 +254,7 @@ submit_Newsfeedbtn.addEventListener("click", (event) => {
 
   if (!emailPattern.test(email)) {
     emailError.innerText = "Error - Invalid Email Address";
-    emailError.style.color = "var(--red-main)";
+    emailError.style.color = "#ffaaaa";
     event.preventDefault();
   } else {
     emailError.innerText = "Thanks For Subscribing ✔✔ ";
