@@ -240,3 +240,29 @@ P_12Show_less.addEventListener("click", () => {
   P12_Show_More.style.display = "none";
   btn_12.style.display = "block";
 });
+
+// Script to handle the Newsletter form
+
+
+var emailInput = document.getElementById("newsFeed");
+var emailError = document.getElementById("emailError");
+var submit_Newsfeedbtn = document.getElementById("subscribe-btn");
+
+submit_Newsfeedbtn.addEventListener("click", (event) => {
+  var email = emailInput.value.trim();
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email)) {
+    emailError.innerText = "Error - Invalid Email Address";
+    emailError.style.color = "var(--red-main)";
+    event.preventDefault();
+  } else {
+    emailError.innerText = "Thanks For Subscribing ✔✔ ";
+    emailError.style.color = "#caffaa"
+    emailInput.value = ""
+    setTimeout(() => {
+      emailError.innerText = "";
+    }, 7000);
+  }
+});
+

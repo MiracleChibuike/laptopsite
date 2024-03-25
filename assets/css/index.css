@@ -507,7 +507,9 @@
 
 #contact{
   padding: 25px 20px;
-  background: url("https://images.unsplash.com/photo-1491466424936-e304919aada7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover;
+  background: var(--secondary-white);
+    /* background: url("https://images.unsplash.com/photo-1493514789931-586cb221d7a7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover; */
+  /* background: url("https://images.unsplash.com/photo-1491466424936-e304919aada7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover; */
 }
 .contact-container{
   display: grid;
@@ -521,9 +523,9 @@
   color: var(--white-main);
   padding: 30px 25px;
 }
-.form{
+/* .form{
   opacity: .8;
-}
+} */
 .form ::placeholder{
   color: var(--white-main);
   font-size: 13px;
@@ -565,10 +567,10 @@
 }
 
  .contact-details-chat{
-  background: var(--white-main);
+  background: var(--light-white);
   color: var(--black--main);
   padding: 30px 25px;
-  opacity: .8;
+  opacity: .9;
 }
 .contactText span{
   border-bottom: 4px solid var(--red-main);
@@ -579,7 +581,7 @@
   display: flex;
 }  */
 .call i, .mesage-email i, .website-icon i, .location i{
-  border: 2.5px solid var(--gray-main);
+  border: 2px solid var(--gray-main);
   padding: 10px;
   border-radius: 50%;
 }
@@ -603,6 +605,94 @@
 }
 .map iframe{
   width: 100%;
+}
+
+/* FOOTER */
+.foot{
+  /* background: url("https://images.unsplash.com/photo-1493514789931-586cb221d7a7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover; */
+  background: var(--black--main);
+  opacity: .9;
+  padding: 25px 20px;
+  color: var(--white-main);
+}
+.footer-contents{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer-contents div h3{
+  color: var(--orange-main);
+  padding: 10px 5px;
+}
+.footer-contents div a{
+  color: var(--white-main);
+  text-decoration: none;
+}
+.footer-contents div img{
+  width: 200px;
+}
+.form-news{
+  margin: 15px 0;
+  display: flex;
+}
+.form-news i{
+  top: 15px;
+  position: relative;
+  left: -240px;
+  color: var(--black--main);
+}
+#subscribe-btn{
+  padding: 10px 25px;
+    border: none;
+    background: var(--orange-main);
+    color: var(--white-main);
+    border-radius: 5px;
+    cursor: pointer;
+}
+#subscribe-btn:hover{
+  opacity: .8;
+  outline: 1px solid var(--orange-main);
+  transition: .5s ease;
+}
+#newsFeed{
+  padding: 10px 40px;
+  width: 250px;
+  border: none;
+  outline: none;
+  background: var(--white-main);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hr-line{
+  font-weight: bold;
+}
+.footerlinks{
+  padding: 15px 0;
+}
+.links-footer{
+  text-align: center;
+}
+.links-footer i{
+  border-radius: 50%;
+  padding: 8px 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  background: var(--orange-main);
+  color: var(--white-main);
+  cursor: pointer;
+  /* margin: 0 8px; */
+}
+.links-footer i:hover{
+  color: var(--orange-main);
+  background: var(--white-main);
+  transition: all .3s ease-in;
+}
+.copyright{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 20px;
+  /* color: var(--light-white); */
 }
 /* For Media Querrt - Smaller Screens */
 @media (min-width: 0) and (max-width: 750px) {
@@ -777,6 +867,17 @@
     .messageInput textarea{
       width: 230px;
     }
+    /* Footer */
+        .footer-contents {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+        }
+                .copyright {
+                  display: flex;
+                  justify-content: flex-start;
+                 
+                  top: 30px; 
+                }
 }
 
 /* for iPads */
@@ -855,5 +956,16 @@
        grid-template-columns: repeat(2, 1fr);
        text-align: center;
    }
+         /* Footer */
+         .footer-contents {
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+         }
+                     .copyright {
+                       display: flex;
+                       justify-content: flex-start;
+          
+                       top: 30px;
+                     }
   
 }
