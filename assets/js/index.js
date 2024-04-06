@@ -23,9 +23,14 @@ showMenu.addEventListener("click", () => {
 // Hide the Nav-contents on icon close click
 hideMenu.addEventListener("click", () => {
   if ((navbar.style.display = "block")) {
-    navbar.style.display = "none";
-    hideMenu.style.display = "none";
-    showMenu.style.display = "block";
+    // navbar.style.display = "none"
+    navbar.style.animation = "hideNav 2s linear";
+    setTimeout(() => {
+      navbar.style.display = "none";
+      hideMenu.style.display = "none";
+      showMenu.style.display = "block";
+      navbar.style.animation = ""; // Reset animation
+    }, 2000); // Match the duration of the animation
   }
   var hide_menuAudio = new Audio("assets/sounds/close-woosh.wav");
   hide_menuAudio.volume = 0.3;
@@ -34,9 +39,13 @@ hideMenu.addEventListener("click", () => {
 
 function closeNavs() {
   if ((navbar.style.display = "block")) {
-    navbar.style.display = "none";
-    hideMenu.style.display = "none";
-    showMenu.style.display = "block";
+    navbar.style.animation = "hideNav 1s linear";
+    setTimeout(() => {
+      navbar.style.display = "none";
+      hideMenu.style.display = "none";
+      showMenu.style.display = "block";
+      navbar.style.animation = ""; // Reset animation
+    }, 1000); // Match the duration of the animation
   }
   var hide_menuAudio = new Audio("assets/sounds/close-woosh.wav");
   hide_menuAudio.volume = 0;

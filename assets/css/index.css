@@ -14,14 +14,16 @@
   background: #f1eff0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #9c1832;
+  background: var(--semi-red);
   border-radius: 50px;
 }
 :root {
   --black--main: rgba(0, 0, 0);
+  --semi-black: rgb(21, 18, 18);
   --white-main: #fff;
   --light-white: #e0d4d4;
   --red-main: #a01111;
+  --semi-red: #9c1832;
   --orange-main: #ffa500;
   --orange-semi: #eed19a;
   --gray-main: rgb(130, 130, 123);
@@ -110,7 +112,9 @@
 #showMenu,
 #hideMenu {
   font-size: 23px;
-  background: transparent;
+  background: var(--semi-black);
+  padding: 5px;
+  border-radius: 5px;
   /* border: 2px solid var(--orange-main); */
   /* width: 35px;
   height: 35px;
@@ -120,6 +124,9 @@
 #showMenu:hover,
 #hideMenu:hover {
   cursor: pointer;
+  /* background: var(--gray-secondary); */
+  box-shadow: 0 0 10px var(--gray-secondary);
+  transition: all .3s ease;
   /* box-shadow: 0 0 45px var(--white-main); */
   /* background: transparent; */
   /* border: 3px solid var(--gray-main);
@@ -754,20 +761,41 @@
     right: 0;
     top: 70px;
     width: 80%;
-    background: var(--orange-main);
-    animation: rotateNav 2s linear;
+    background: var(--black--main);
     transition: all 0.3s;
     padding-bottom: 10px;
+    box-shadow: 0 0 30px var(--semi-black);
+    animation: rotateNav 2s linear;
   }
+  #animate{
+    animation: closeNavs 2s linear;
+  }
+@keyframes hideNav {
+  0% {
+    width: 80%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
   @keyframes rotateNav {
     0% {
       width: 0;
-      /* height: 0; */
     }
     50%,
     100% {
       width: 80%;
-      /* height: 89%; */
+    }
+  }
+  
+
+  @keyframes closeNavs {
+    0%{
+      width: 40%;
+    }
+    100%{
+      width: 100%;
     }
   }
   .navbar ul {
@@ -775,7 +803,7 @@
   }
   .navbar ul li {
     margin-top: 10px;
-    padding: 20px;
+    padding: 25px;
   }
   /* Menu Bar */
   .menuIcon {
@@ -783,7 +811,7 @@
   }
   .navbar ul li:hover {
     border-bottom: none;
-    background: var(--black--main);
+    background: var(--semi-black);
     width: 240px;
     cursor: pointer;
     font-weight: bold;
