@@ -34,6 +34,12 @@
 </head>
 
 <body class="toggleBg">
+    <!-- headre -->
+    <!-- <header>
+        <div class="bounceAnim">
+
+        </div>
+    </header> -->
     <!-- Parent-Container -->
     <div class="parent">
         <!-- contacts on top -->
@@ -63,7 +69,7 @@
             <nav class="navbar" >
                 <ul>
                     <li class="landing">
-                        <a href="#hero" > <i class="fa-solid fa-house"></i>Home</a>
+                        <a href="#hero" id="pageHome"> <i class="fa-solid fa-house"></i>Home</a>
                     </li>
                     <li>
                         <a href="#about"> <i class="fa-solid fa-users"></i> About Us</a>
@@ -138,7 +144,7 @@
         <!-- End Hero Section -->
 
         <!-- ABOUT SECTION -->
-        <section id="about">
+        <section id="about" onclick="closeNavs()">
             <div class="aboutHome">
                 <div class="aboutImage">
                     <!-- <img src="assets/images/laptop-main.png" alt="" id="about-img"> -->
@@ -194,7 +200,7 @@
         <!-- End About Section -->
 
         <!-- PRODUCTS SECTION -->
-        <section id="products">
+        <section id="products" onclick="closeNavs()">
             <h2 class="products-header">Popular Products</h2>
             <!-- products-display -->
             <div class="productsDiv">
@@ -859,7 +865,7 @@
         </section>
 
         <!-- CONTECT US SECTION -->
-        <section id="contact">
+        <section id="contact" onclick="closeNavs()">
             <div class="contact-container">
                 <div class="contact-form">
                     <h2 class="msg">Kindly Send Us a Message</h2>

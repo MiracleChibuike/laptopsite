@@ -160,6 +160,38 @@
       transition: 0.3s ease;
       cursor: pointer;
 }
+/* Animation */
+
+/* .bounceAnim{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--semi-red);
+  animation: bounceHome 3s linear infinite;
+  position: absolute;
+  top: 50%;
+}
+@keyframes bounceHome {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+} */
+/* #pageHome{
+    color: var(--orange-main);
+} */
 .navbar ul li i {
   color: var(--white-main);
   padding: 0 10px;
