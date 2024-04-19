@@ -37,7 +37,7 @@
 .contactGlobal {
   display: flex;
   justify-content: space-between;
-  padding: 5px 50px;
+  padding: 15px 50px;
   background: var(--black--main);
   color: var(--white-main);
   height: 90px;
@@ -84,6 +84,32 @@
 #clock {
   font-size: 20px;
 }
+.Translate{
+  color: var(--black--main);
+}
+/* styling for google translate page */
+.goog-te-combo {
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  outline: none;
+  border: transparent;
+}
+
+.goog-te-combo:hover {
+  outline: 2px solid var(--semi-red);
+  cursor: pointer;
+  transition: .3s ease;
+}
+.goog-te-gadget{
+  color: #000;
+  font-size: 2px;
+}
+.VIpgJd-ZVi9od-l4eHX-hSRGPd,
+.VIpgJd-ZVi9od-l4eHX-hSRGPd:link {
+  display: block;
+}
+
 /* main-nav */
 .nav {
   display: flex;
@@ -775,6 +801,7 @@
   .contactGlobal {
     display: none;
   }
+
   /* NavBar */
   .nav{
         position: fixed;
